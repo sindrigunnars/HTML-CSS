@@ -1,31 +1,83 @@
 @media screen and (min-width:600px){
     img#optional{display: none;}
-
-    /* img#play{
-        border-radius: 2px;
-        background: #73AD21;
-        padding: 5px; 
-        width: 10px;
-        height: 10px; 
-        display: inline-block;
-      } */
-
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
     .piano {
+        display: flex;
         margin: auto;
+        justify-content: center;
+        border-radius: 25px;
+        align-items: center;
+        width: 97%;
+        height: 400px;
+        background-color: darkblue;
+    }
+    .w_butt{
+        position: absolute;
+        top: 150px;
+        height: 250px;
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+    }
+
+    .w_butt button {
+        width: 100%;
+        background-color: white;
+        border-color: black;
+    }
+
+    .white:active {
+        background-color: grey;
+    }
+
+    .b_butt{
+        z-index: 1;
+        position: absolute;
+        margin-left: 7%;
+        top: 150px;
+        height: 125px;
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        justify-items: center;
+    }
+
+    .b_butt button {
         width: 50%;
-        border: 3px solid green;
-        background-color: green;
-        padding: 10px;
-      }
-      
-    .play {
-        background-image: url("public/play.png");
-        background-color: aliceblue;
+        text-align: center;
+        padding: 0;
+        background-color: black;
+        color: white;
+        border-color: grey;
+    }
+
+    .b_butt button.blackC {
+        grid-column: 1;
+    }
+    .b_butt button.blackD {
+        grid-column: 2;
+    }
+    .b_butt button.blackF {
+        grid-column: 4;
+    }
+    .b_butt button.blackG {
+        grid-column: 5;
+    }
+    .b_butt button.blackBb {
+        grid-column: 6;
+    }
+    .b_butt button.blackC5 {
+        grid-column: 8;
+    }
+    .b_butt button.blackD5 {
+        grid-column: 9;
     }
 }
 @media screen and (max-width:599px){
     #bla p#errtxt::after {content: "This website requires at least 600px screen width";}
-    #piano {
-        display: none;
-    }
+    .piano {display: none;}
 }
