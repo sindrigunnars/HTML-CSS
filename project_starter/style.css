@@ -1,23 +1,49 @@
 @media screen and (min-width:600px){
-    img#optional{display: none;}
-    html,
-    body {
-      margin: 0;
-      padding: 0;
+    .error{display: none;}
+
+    .piano ul {
+        display: flex;
+        z-index: 2;
+        flex-direction: row wrap;
+        justify-content: space-between;
+        background-color: green;
+        width: 75%;
+        height: 50px;
+        margin-top: 50px;
     }
+
+    .piano li {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 10px;
+        margin-left: -20px;
+    }
+
+    .menubar {
+        background-color: white;
+        border-radius: 10%;
+    }
+    .menubar:disabled {
+        background-color: grey;
+        opacity: 50%;
+    }
+    .piano img {
+        width: 15px;
+        height: 15px;
+    }
+
     .piano {
         display: flex;
         margin: auto;
         justify-content: center;
         border-radius: 25px;
-        align-items: center;
         width: 97%;
         height: 400px;
         background-color: darkblue;
     }
     .w_butt{
         position: absolute;
-        top: 150px;
+        top: 140px;
         height: 250px;
         width: 75%;
         display: grid;
@@ -38,7 +64,7 @@
         z-index: 1;
         position: absolute;
         margin-left: 7%;
-        top: 150px;
+        top: 140px;
         height: 125px;
         width: 75%;
         display: grid;
@@ -78,6 +104,6 @@
     }
 }
 @media screen and (max-width:599px){
-    #bla p#errtxt::after {content: "This website requires at least 600px screen width";}
+    .errtxt::after {content: "This website requires at least 600px screen width";}
     .piano {display: none;}
 }

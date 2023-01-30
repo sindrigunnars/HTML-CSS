@@ -6,12 +6,28 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="bla" class="opt">
+        <div class="error">
             <img id= "optional" src="public/oops.jpg" alt="">
-            <p id="errtxt"></p>
+            <p class="errtxt"></p>
         </div>
-        </div>
+
         <div class="piano">
+            <ul>
+                <li class="tune">
+                    <label for="song">Tune: </label>
+                    <select name="song" id="song">
+                        <option value="Fur Elise">Für Elise</option>
+                        <option value="Fur Elise">The Godfather</option>
+                        <option value="Seven nation army">Seven Nation Army</option>
+                    </select>
+                    <button class="menubar"><img src="public/play.png" alt=""></button>
+                </li>
+                <li class="record">Record: 
+                    <button class="menubar"><img src="public/record.png" alt=""></button>
+                    <button class="menubar" disabled><img src="public/stop.png" alt=""></button>
+                </li>
+              </ul> 
+
             <div class="b_butt">
                 <button class="blackC">C<br>(w)</button>
                 <button class="blackD">D#4<br>(e)</button>
@@ -21,6 +37,7 @@
                 <button class="blackC5">C#5<br>(o)</button>
                 <button class="blackD5">D#5<br>(p)</button>
             </div>
+
             <div class="w_butt">
                 <button class="white">C4<br>(a)</button>
                 <button class="white">E4<br>(s)</button>
