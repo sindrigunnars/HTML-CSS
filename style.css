@@ -1,8 +1,6 @@
 @media screen and (min-width:600px){
     .error{display: none;}
 
-
-
     .piano {
         display: flex;
         margin: auto;
@@ -28,7 +26,7 @@
     .piano li {
         display: table-cell;
         vertical-align: middle;
-        margin: 15px;
+        margin: 19px;
     }
 
     .menubar {
@@ -38,6 +36,10 @@
         height: 30px;
         width: 30px;
         transform: translateY(-5px);
+    }
+
+    .menubar:active {
+        background-color: #808080;
     }
 
     .menubar:disabled {
@@ -68,7 +70,7 @@
     }
 
     .white:active {
-        background-color: grey;
+        background-color: #808080;
     }
 
     .b_butt{
@@ -81,6 +83,7 @@
         display: grid;
         grid-template-columns: repeat(10,1fr);
         justify-items: center;
+        pointer-events: none;
     }
 
     .b_butt button {
@@ -90,6 +93,11 @@
         background-color: #000000;
         color: white;
         border-color: grey;
+        pointer-events: auto;
+    }
+
+    .b_butt button:active {
+        background-color: #808080;
     }
 
     .b_butt button.blackC {grid-column: 1;}
@@ -129,6 +137,28 @@
 
     .error{display: none;}
 
+    .menubar {
+        background-color: white;
+        border-radius: 10%;
+        height: 30px;
+        width: 30px;
+        transform: translateY(-5px);
+    }
+
+    .menubar:disabled {
+        background-color: white;
+        opacity: 50%;
+    }
+
+    .piano {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        border-radius: 25px;
+        height: 375px;
+        width: 1000px;
+    }
+
     .piano ul {
         position: absolute;
         display: flex;
@@ -144,21 +174,9 @@
     .piano li {
         display: table-cell;
         vertical-align: middle;
-        margin: 15px;
+        margin: 19px;
     }
 
-    .menubar {
-        background-color: white;
-        border-radius: 10%;
-        height: 30px;
-        width: 30px;
-        transform: translateY(-5px);
-    }
-
-    .menubar:disabled {
-        background-color: grey;
-        opacity: 50%;
-    }
     .piano img {
         position: absolute;
         width: 13px;
@@ -166,13 +184,6 @@
         transform: translate(-7px,-7px);
     }
 
-    .piano {
-        display: flex;
-        margin: auto;
-        justify-content: center;
-        border-radius: 25px;
-        height: 375px;
-    }
     .w_butt{
         position: absolute;
         top: 110px;
@@ -213,25 +224,11 @@
         border-color: grey;
     }
 
-    .b_butt button.blackC {
-        grid-column: 1;
-    }
-    .b_butt button.blackD {
-        grid-column: 2;
-    }
-    .b_butt button.blackF {
-        grid-column: 4;
-    }
-    .b_butt button.blackG {
-        grid-column: 5;
-    }
-    .b_butt button.blackBb {
-        grid-column: 6;
-    }
-    .b_butt button.blackC5 {
-        grid-column: 8;
-    }
-    .b_butt button.blackD5 {
-        grid-column: 9;
-    }
+    .b_butt button.blackC {grid-column: 1;}
+    .b_butt button.blackD {grid-column: 2;}
+    .b_butt button.blackF {grid-column: 4;}
+    .b_butt button.blackG {grid-column: 5;}
+    .b_butt button.blackBb {grid-column: 6;}
+    .b_butt button.blackC5 {grid-column: 8;}
+    .b_butt button.blackD5 {grid-column: 9;}
 }
